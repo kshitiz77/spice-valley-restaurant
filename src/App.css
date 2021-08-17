@@ -1,38 +1,492 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Navbar */
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar_content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 7px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+  width: 40%;
+}
+.logo img{
+  width: 120px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar_menu{
+
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+.navbar_menu li a{
+      text-decoration: none;
+      color: red;
+      padding: 0 15px;
+      font-weight: 700;  
+}
+
+/* Banner */
+.banner{
+  width: 100vw;
+  height: 100vh;
+  background: url("./img/bg.jpg");
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.banner_content{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  color:white;
+}
+
+.container{
+  width: 987px;
+  max-width: 987px;
+  margin: 0 auto;
+  
+}
+
+.banner_text{
+  width: 587px;
+}
+
+.banner_text h3{
+  font-size: 25px; 
+}
+
+.banner_text h1{
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+.banner_text p{
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.banner_btn{
+  margin-top: 35px;
+}
+.btn{
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 15px 30px;
+  
+}
+
+.btn-smart{
+  cursor: pointer;
+  background-color: #520202;
+}
+
+/* About */
+.about{
+  padding: 120px 0;
+  height: 100vh;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+}
+
+.col-4{
+  width: 50%;
+}
+.p-4{
+  padding: 45px;
+}
+.about h3{
+  color: grey;
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 700px;
+}
+
+.about h1{
+  font-size: 34px;
+  color: rgb(61, 61, 61);
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+.about p{
+  font-size:18px;
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+}
+
+.about_btn{
+  margin-top: 44px;
+}
+
+.about_image {
+  width: 100%;
+  overflow: hidden;
+}
+.about_image img{
+  width: 100%;
+  margin-top: 44px;
+}
+
+/* Shop */
+.shop{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-container{
+  background: url("./img/shop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.shop_text{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 550px;
+  height: 350px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.shop_text h1{
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+}
+.shop_text h3{
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+}
+
+.shop_btn{
+  margin: 22px;
+}
+
+/* Clients Counter */
+.clients{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.main_container{
+  background-color: #3e3c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 60vh;
+  margin: auto;
+}
+
+.counter_container{
+  padding: 30px;
+}
+
+.para{
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
+
+.counter{
+  font-size: 72px;
+  color: #ffbf00;
+  padding: 12px;
+}
+
+/* Prices */
+
+.prices{
+  width: 100vw;
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.price_inside{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.price{
+  padding: 20px 0;
+  margin: 20px;
+  text-align: center;
+  width: 40vh;
+  
+}
+
+.recipies_img{
+  width: 100%;
+}
+.recipies_img img{
+  width: 250px;
+  height: 235px;
+  border-radius: 20px;
+}
+
+.price_heading{
+  margin: 5px;
+}
+
+.prices_rs{
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* Cart */
+button{
+  margin: 1.2rem;
+  border: none;
+}
+.cart{
+  text-decoration: none;
+  width: 60%;
+  margin: 12px auto;
+  background-color: #520202;
+  padding: 4px 12px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 8px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Contact */
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.contact-input{
+  padding: .3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.contact-container input,
+.contact-container textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.contact-container label{
+  font-size: 1.5rem;
+}
+@media (max-width : 1096px){
+  .navbar{
+    height: 70px;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar_content{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
   }
+
+  .navbar_menu{
+    flex-wrap: wrap;
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .navbar_menu li{
+    margin-top: .5rem;  
+}
+
+  /* Banner */
+  
+  .container{
+    width: 100vw;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .banner_text{
+    width: auto;
+    height: 100%;
+    margin-top: 50px;
+  }
+  
+  .banner_text h3{
+    font-size: 20px;
+  }
+  
+  .banner_text h1{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .banner_text p{
+    font-size: 18px;
+  }
+  
+  .banner_btn{
+    margin-top: 25px;
+  }
+
+  /* About */
+  .about{
+    width: auto;
+    height: auto;
+    padding: 120px 0;
+  }
+  
+  .row{
+    flex-wrap: wrap-reverse;
+  }
+  .col-4{
+    width: 100%;
+  }
+  .p-4{
+    padding: 25px;
+  }
+  .about h3{
+  font-size: 20px; 
+  }
+  
+  .about h1{
+    font-size: 24px;
+  }
+  
+  .about_btn{
+    margin-top: 34px;
+  }
+
+  /* Shop */
+.shop{
+  padding-top: 7.6rem;
+}
+.shop_text{
+  width: 100%;
+}
+
+.shop_text h1{
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+.shop_text h3{
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+}
+
+.shop_btn{
+  margin: 22px;
+}
+
+/* Clients Counter */
+
+.clients{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.main_container{
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+}
+
+.counter_container{
+  padding: 15px;
+}
+
+.para{
+  font-size: 18px;
+}
+
+.counter{
+  font-size: 44px;
+  color: #ffbf00;
+  padding: 8px;
+}
+
+/* Prices */
+
+.prices{
+  width: auto;
+  height: auto;
+  padding-top: 6.3rem;
+}
+
+.price{
+  width: auto;
+  height: auto;
+}
+
+
+.recipies_img img{
+  width: 220px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+/* Contact */
+.contact{
+  width: auto;
+  height: auto;
+  padding: 150px 0;
+} 
+
+
 }
